@@ -1,0 +1,2 @@
+# ssmgrnode
+ssmgr node onekey
