@@ -25,7 +25,7 @@ apt-get update
 echo "Install package..."
 export DEBIAN_FRONTEND=noninteractive
 apt-get install tzdata iproute2 curl git sudo software-properties-common -y
-curl -sL https://deb.nodesource.com/setup_8.x | bash -
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt-get install -y nodejs shadowsocks-libev
 npm i -g shadowsocks-manager --unsafe-perm
 npm install pm2 -g
