@@ -31,7 +31,7 @@ apt-get install -y nodejs shadowsocks-libev
 npm i -g shadowsocks-manager --unsafe-perm
 npm install pm2 -g
 echo "Asia/Shanghai" > /etc/timezone
-rm /etc/localtime && \
+rm /etc/localtime
 dpkg-reconfigure -f noninteractive tzdata
 echo "Optimize the shadowsocks server..."
 cat >> /etc/security/limits.conf << EOF
