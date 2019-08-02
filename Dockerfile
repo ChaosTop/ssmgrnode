@@ -8,11 +8,11 @@ RUN set -ex \
 	&& export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get -t sid install -y --no-install-recommends shadowsocks-libev simple-obfs tzdata iproute2 curl git sudo software-properties-common \
 	&& curl -sL https://deb.nodesource.com/setup_12.x | bash - \
-    && apt-get install -y nodejs \
+        && apt-get install -y nodejs \
 	&& npm i -g shadowsocks-manager --unsafe-perm \
-    && echo "Asia/Shanghai" > /etc/timezone \
-    && rm /etc/localtime \
-    && dpkg-reconfigure -f noninteractive tzdata \
+        && echo "Asia/Shanghai" > /etc/timezone \
+        && rm /etc/localtime \
+        && dpkg-reconfigure -f noninteractive tzdata \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& chmod +x /root/startup.sh
 
