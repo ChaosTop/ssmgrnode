@@ -4,8 +4,7 @@
 set -m
 
 # Start the primary process and put it in the background
-ss-manager -m chacha20-ietf-poly1305 -u -d 1.1.1.1 --plugin obfs-server --plugin-opts "obfs=http" --manager-address 127.0.0.1:6001
-autostart=true &
+ss-manager -m chacha20-ietf-poly1305 -u -d 1.1.1.1 --plugin obfs-server --plugin-opts "obfs=http" --manager-address 127.0.0.1:6001 &
 
 # Start the helper process
 ssmgr -c default.yml
