@@ -48,6 +48,6 @@ RUN set -ex && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&  \
     echo "Asia/Shanghai" > /etc/timezone  &&  \
     npm i -g shadowsocks-manager --unsafe-perm && \
-	chmod +x /root/startup.sh
+	chmod +x /startup.sh
 
 CMD [ "./startup.sh" ]
