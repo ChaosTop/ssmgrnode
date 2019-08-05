@@ -6,7 +6,7 @@ RUN set -ex \
 	&& printf "deb http://deb.debian.org/debian sid main" > /etc/apt/sources.list.d/sid.list \
 	&& apt-get update \
 	&& export DEBIAN_FRONTEND=noninteractive \
-	&& apt-get -t sid install -y --no-install-recommends shadowsocks-libev simple-obfs tzdata iproute2 curl git sudo software-properties-common \
+	&& apt-get -t sid install -y --no-install-recommends shadowsocks-libev=3.0.8 simple-obfs tzdata iproute2 curl git sudo software-properties-common \
 	&& curl -sL https://deb.nodesource.com/setup_12.x | bash - \
         && apt-get install -y nodejs \
 	&& npm i -g shadowsocks-manager --unsafe-perm \
