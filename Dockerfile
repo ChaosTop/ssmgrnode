@@ -6,7 +6,7 @@ ENV SS_URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$
 
 ENV SIMPLE_OBFS_VER=0.0.5
 
-COPY startup.sh /root/startup.sh
+COPY startup.sh /startup.sh
 
 RUN set -ex && \
     apk add --no-cache --virtual .build-deps \
@@ -50,6 +50,4 @@ RUN set -ex && \
     npm i -g shadowsocks-manager --unsafe-perm && \
 	chmod +x /root/startup.sh
 
-USER nobody
-
-CMD [ "./root/startup.sh" ]
+CMD [ "./startup.sh" ]
