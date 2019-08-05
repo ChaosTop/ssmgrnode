@@ -52,5 +52,4 @@ RUN set -ex && \
 
 USER nobody
 
-
 CMD [ "./root/startup.sh" ]
