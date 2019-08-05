@@ -6,7 +6,7 @@ ENV SS_URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$
 
 ENV SIMPLE_OBFS_VER=0.0.5
 
-COPY startup.sh /root/startup.sh
+COPY startup.sh /startup.sh
 
 RUN set -ex && \
     apk add --no-cache --virtual .build-deps \
@@ -48,6 +48,7 @@ RUN set -ex && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&  \
     echo "Asia/Shanghai" > /etc/timezone  &&  \
     npm i -g shadowsocks-manager --unsafe-perm && \
-	chmod +x /root/startup.sh
+	chmod +x /startup.sh
 
-CMD [ "./root/startup.sh" ]
+
+ENTRYPOINT [ "/startup.sh" ]
