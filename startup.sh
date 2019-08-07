@@ -4,7 +4,7 @@
 set -m
 
 # Start the primary process and put it in the background
-ss-manager -m chacha20 -u -d 1.1.1.1 --plugin obfs-server --plugin-opts "obfs=http" --manager-address 127.0.0.1:4001 &
+ss-manager -m chacha20 -u -d 1.1.1.1 --plugin obfs-server --plugin-opts "obfs=tls" --manager-address 127.0.0.1:4001 &
 
 # Start the helper process
 ssmgr -c default.yml -m 0.0.0.0:4002
